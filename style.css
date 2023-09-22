@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  font-size: 62.5%;
+}
+
+body {  
+  display: flex;
+  padding: 23.9rem 54.2rem 31.9rem;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  background: linear-gradient(45deg, #190361 0%, #B0F 100%);
+}
+
+main {
+  display: flex;
+  height: 42.8rem;
+  width: 42.8rem;
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #FFF;
+  box-shadow: 0 2rem 5rem 0px rgba(0, 0, 0, 0.80);
+}
+
+.hide{
+  display: none;
+}
+
+.screen1 h1 {
+  color: #34355B;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.screen1 p {
+  margin: 1.4rem 0 2.7rem;
+  color: #34355B;
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.5rem;
+  width: 19.2rem;
+  margin-left: 2.5rem;
+}
+
+.screen1 img {
+  width: 24.9rem;
+  height: 19.1rem;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+
+
+/* screen2 */
+
+.screen2 {  
+  display: flex;
+  padding: 48px 64px;  
+  flex-direction: column;
+  gap: 10px;
+}
+
+.screen2 h2 {
+  color: #34355B;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+}
+
+.screen2 #message {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: #E4EDF1;
+  box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+  width: 29.3rem;
+  height: 10.7rem;
+  margin: 1.7rem 0 1.7rem;
+  width: 29.7rem;
+
+}
+.screen2 #message p {
+  color: #000;
+  text-align: center;
+  font-size: 2.4rem;
+  width: 27.3rem;
+  height: 8.7rem;
+  font-family: 'Dancing Script', cursive;
+}
+
+.screen2 img {
+  display: flex;
+  width: 30.rem;
+  height: 11.5rem;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+button {
+  padding: 1.6rem;
+  gap: 1rem;
+  border-radius: 4px;
+  background: #FF9500;
+  border-style: none;
+  color: #FFF;
+  text-align: center;
+  font-family: DM Sans;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-5px, 5px); }
+  40% { transform: translate(5px, -5px); }
+  60% { transform: translate(-5px, 5px); }
+  80% { transform: translate(5px, -5px); }
+  100% { transform: translate(0, 0); }
+}
+
+.screen1 img:hover {
+  animation: shake 0.5s ease-in-out infinite;
+}
+
+@keyframes slideAndGrow {
+  0% {
+    transform: translateY(100%) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-30%) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.screen2 #message {
+  animation: slideAndGrow 1s ease-in-out forwards;
+  transform-origin: bottom;
+  display: inline-block;
+  opacity: 0;
+}
